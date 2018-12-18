@@ -133,19 +133,19 @@ function start() {
       snek.velocity.y = 0;
       return;
     }
-    if (keypressed == 40) {// down
+    if (keypressed == 40 && snek.velocity.y != -step) { // down
       snek.velocity.x = 0;
       snek.velocity.y = step;
       }
-    if (keypressed == 39) { // right
+    if (keypressed == 39 && snek.velocity.x != -step) { // right
       snek.velocity.x = step;
       snek.velocity.y = 0;
       }
-    if (keypressed == 38) { // up
+    if (keypressed == 38 && snek.velocity.y != step) { // up
       snek.velocity.x = 0;
       snek.velocity.y = -step;
       }
-    if (keypressed == 37) { //left
+    if (keypressed == 37 && snek.velocity.x != step) { // left
       snek.velocity.x = -step;
       snek.velocity.y = 0;
     }
